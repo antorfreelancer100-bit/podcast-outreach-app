@@ -79,15 +79,14 @@ if st.button("🚀 Research & Write Email"):
             """
 
             try:
-                response = client.models.generate_content(
-                    model="gemini-1.5-flash",
-                    contents=user_prompt,
-                    config=types.GenerateContentConfig(
-                        system_instruction=system_instruction,
-                        temperature=0.7,
-                    )
-                )
-
+              response = client.models.generate_content(
+    model='gemini-2.5-flash',
+    contents=user_prompt,
+    config=types.GenerateContentConfig(
+        system_instruction=system_instruction,
+        temperature=0.7,
+    )
+)
                 st.success("✅ রিসার্চ সম্পন্ন এবং ইমেইল তৈরি হয়েছে!")
                 st.markdown("---")
                 st.markdown(response.text)
