@@ -79,7 +79,7 @@ if st.button("🚀 Research & Write Email"):
             """
 
             try:
-              response = client.models.generate_content(
+                response = client.models.generate_content(
     model='gemini-2.5-flash',
     contents=user_prompt,
     config=types.GenerateContentConfig(
